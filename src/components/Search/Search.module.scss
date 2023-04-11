@@ -1,0 +1,69 @@
+@import '../../scss/variables';
+
+.search {
+    position: relative;
+
+    &__icon-find {
+        width: 28px;
+        height: 28px;
+        opacity: .3;
+        position: absolute;
+        z-index: 1;
+        left: 19px;
+        top: 11px;
+    }
+
+    &__icon-close {
+        width: 18px;
+        height: 18px;
+        opacity: .3;
+        position: absolute;
+        z-index: 1;
+        right: 7px;
+        top: 16px;
+        cursor: pointer;
+
+        &:hover {
+            fill: red;
+            opacity: .8;
+        }
+    }
+}
+
+.input {
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 12px 30px 12px 38px;
+    width: 30vw;
+    min-width: 250px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all .1s ease-in-out;
+
+    &:focus {
+        border: 1px solid rgba(0, 0, 0, .4);
+        box-shadow: inset $shadow;
+    }
+}
+
+@media (max-width: 1200px) {
+    .search {
+        order: 3;
+    }
+
+    .input {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 792px) {
+    .search {
+        order: 4;
+    }
+}
+
+@media (max-width: 680px) {
+    .search {
+        order: 5;
+    }
+}

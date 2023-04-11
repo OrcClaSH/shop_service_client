@@ -1,0 +1,32 @@
+@import '../../../../scss/variables';
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: auto;
+    padding: 1.3rem 1rem;
+    min-width: 200px;
+    max-width: max-content;
+    min-height: 300px;
+    max-height: max-content;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #fff;
+    box-shadow: inset $shadow;
+    border-radius: 8px;
+
+    &__name {
+        margin-bottom: .5em;
+    }
+
+    &__link p {
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color .1s;
+    }
+
+    &__link:hover p {
+        color: $orange;
+    }
+}

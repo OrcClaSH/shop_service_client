@@ -1,0 +1,55 @@
+@import '../../scss/variables';
+
+.pagination {
+    display: inline-flex;
+    gap: 5px;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #fe5f1e;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: $shadow;
+
+        &:hover {
+            background-color: #fe5f1e;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        a {
+            width: 100%;
+            text-align: center;
+            color: #fe5f1e;
+            font-weight: 700;
+        }
+    }
+
+    :global {
+        .selected {
+            background-color: #fe5f1e;
+            a {
+                color: #fff;
+            }
+        }
+
+        .disabled {
+            opacity: .3;
+            cursor: auto;
+
+            &:hover {
+                background-color: #fff;
+
+                a {
+                    color: #fe5f1e;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.error {
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        color: red;
+    }
+
+    &__text {
+        font-size: 18px;
+    }
+}
