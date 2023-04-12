@@ -1,9 +1,10 @@
 import { AnyAction } from "@reduxjs/toolkit";
+import { API_URL } from '../http';
 
 import { TCartProducts, TCartState } from "redux/slices/cart/types";
 import { TRootState } from "redux/store";
 
-export const urlBase = 'http://clt.its:5000/api/products';
+export const urlBase = `${API_URL}/products`;
 
 export const makeUrl = (rootState: TRootState) => {
     const urlMain = `${urlBase}?`

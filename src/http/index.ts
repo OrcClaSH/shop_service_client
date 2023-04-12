@@ -3,6 +3,7 @@ import axios, { AxiosRequestConfig } from 'axios';
 import { IAuthResponse } from 'redux/slices/user/types';
 
 export const API_URL = process.env.REACT_APP_API_URL || 'http://clt.its:5000/api';
+console.log(API_URL)
 
 const $api = axios.create({
     withCredentials: true,

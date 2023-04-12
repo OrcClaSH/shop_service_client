@@ -24,6 +24,3 @@ function App() {
 }
 
 export default App;
-
-// TODO при вводе поискового запроса переключить страницу на 1
-// TODO params на остальных страницах
