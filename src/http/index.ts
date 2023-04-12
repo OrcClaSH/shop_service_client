@@ -2,7 +2,8 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 import { IAuthResponse } from 'redux/slices/user/types';
 
-export const API_URL = process.env.REACT_APP_API_URL || 'http://clt.its:5000/api';
+export const API_URL = process.env.REACT_APP_API_URL
+    // || 'http://clt.its:5000/api';
 console.log(API_URL)
 
 const $api = axios.create({
@@ -11,6 +12,7 @@ const $api = axios.create({
 });
 
 $api.interceptors.request.use((config: AxiosRequestConfig) => {
+    console.log('config', config)
     if (config.headers) {
         config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
     }
@@ -18,6 +20,7 @@ $api.interceptors.request.use((config: AxiosRequestConfig) => {
 });
 
 $api.interceptors.response.use((config) => config, async (error) => {
+    console.log('error', error)
     const originalRequest = error.config;
     if (error.response.status == 401 && error.config && !error.config._isRetry) {
         originalRequest._isRetry = true;
