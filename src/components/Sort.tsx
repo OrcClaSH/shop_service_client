@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from 'redux/store';
 import classNames from 'classnames'
 
-import { setActiveSortMethod } from '../redux/slices/sort/sortSlice';
 import { selectorSort } from 'redux/selectors';
+import { useAppSelector, useAppDispatch } from 'redux/store';
+import { setActiveSortMethod } from '../redux/slices/sort/sortSlice';
 
 const Sort = () => {
     const { sortMethods, activeSortMethod } = useAppSelector(selectorSort);

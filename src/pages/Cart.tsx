@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from 'redux/store';
 
-import ProductCart from "../components/ProductCart/ProductCart";
-import { clearItems } from "../redux/slices/cart/cartSlice";
-import { sumProducts as sumProducts } from "../utils";
-import CartEmpty from "../components/CartEmpty";
 import { selectorCart } from 'redux/selectors';
+import CartEmpty from "../components/CartEmpty";
+import { sumProducts as sumProducts } from "../utils";
+import { clearItems } from "../redux/slices/cart/cartSlice";
+import { useAppSelector, useAppDispatch } from 'redux/store';
+import ProductCart from "../components/ProductCart/ProductCart";
 import ButtonToHome from 'components/ButtonToHome/ButtonToHome';
 
 const Cart: React.FC = () => {

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useAppSelector, useAppDispatch } from "redux/store";
 import { Link } from "react-router-dom";
-import { addItem } from '../../redux/slices/cart/cartSlice';
+
 import { countProductId } from "../../utils";
 import { selectorCartById } from "redux/selectors";
+import { addItem } from '../../redux/slices/cart/cartSlice';
+import { useAppSelector, useAppDispatch } from "redux/store";
 
 export const typesProduct = {
     0: 'длина 46 м',

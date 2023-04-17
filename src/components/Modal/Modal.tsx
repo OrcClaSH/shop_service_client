@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import ReactDOM from 'react-dom';
-
 import cn from 'classnames';
+import ReactDOM from 'react-dom';
+import React, { FC } from 'react';
 
 import styles from './Modal.module.scss';
 
@@ -24,14 +23,7 @@ const Modal: FC<IModal> = ({ active, setActive, children }) => {
 
     const handleModalNotActive = () => {
         setActive(false)
-        // document.body.style.overflow = 'visible'
     };
-
-    // React.useEffect(() => {
-    //     active
-    //         ? document.body.style.overflow = 'hidden'
-    //         : document.body.style.overflow = 'visible'
-    // }, [active]);
 
     return ReactDOM.createPortal(
         <div className={modalClasses} onClick={handleModalNotActive}>

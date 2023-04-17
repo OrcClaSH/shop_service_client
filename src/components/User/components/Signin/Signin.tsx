@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { useAppDispatch, useAppSelector } from 'redux/store';
 import { useInput } from 'hooks/useValidateForm';
 import { login } from 'redux/slices/user/userSlice';
+import { useAppDispatch, useAppSelector } from 'redux/store';
 
 import styles from './Signin.module.scss';
 

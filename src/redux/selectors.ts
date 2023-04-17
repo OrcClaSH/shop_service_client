@@ -7,9 +7,6 @@ export const selectorCart = createSelector(
     (cart) => cart
 );
 
-// TODO
-// export const selectorCartById = (id: number) => (state: TRootState) => state.cart.items.filter(item => item.id === id);
-
 export const selectorCartById = (id: number) => createSelector(
     [selectCart],
     (cart) => cart.items.filter(item => item.id === id)

@@ -1,8 +1,7 @@
 import axios from "axios";
-
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { TFetchProducts, TProduct, TProductsState } from "./types";
-// import { isError } from "utils";
 
 const initialState: TProductsState = {
     products: [],

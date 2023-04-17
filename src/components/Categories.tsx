@@ -1,10 +1,9 @@
 import React from "react";
-import { useAppSelector, useAppDispatch } from "redux/store";
-// import { useWhyDidYouUpdate } from 'ahooks';
 
-import { setActiveCategory } from "../redux/slices/category/categorySlice";
-import { setPage } from '../redux/slices/pagination/paginationSlice';
 import { selectorCategory } from "redux/selectors";
+import { useAppSelector, useAppDispatch } from "redux/store";
+import { setPage } from '../redux/slices/pagination/paginationSlice';
+import { setActiveCategory } from "../redux/slices/category/categorySlice";
 
 const Categories: React.FC = () => {
     const { categories, activeCategory } = useAppSelector(selectorCategory);
@@ -15,8 +14,6 @@ const Categories: React.FC = () => {
         dispatch(setActiveCategory(category))
         dispatch(setPage(1));
     }
-    // console.log('rerender category')
-    // useWhyDidYouUpdate('Categories', {categories, activeCategory})
 
     return (
         <div className="categories">

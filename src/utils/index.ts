@@ -1,8 +1,8 @@
 import { AnyAction } from "@reduxjs/toolkit";
-import { API_URL } from '../http';
 
-import { TCartProducts, TCartState } from "redux/slices/cart/types";
+import { API_URL } from '../http';
 import { TRootState } from "redux/store";
+import { TCartProducts, TCartState } from "redux/slices/cart/types";
 
 export const urlBase = `${API_URL}/products`;
 

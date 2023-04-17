@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from 'redux/store';
 
+import Skeleton from '../ProductBlock/Skeleton';
+import { selectorCartById } from 'redux/selectors';
+import ErrorOnPage from '../ErrorOnPage/ErrorOnPage';
 import { countProductId, urlBase } from "../../utils";
 import { addItem } from '../../redux/slices/cart/cartSlice';
 import { typesProduct } from '../ProductBlock/ProductBlock';
-import Skeleton from '../ProductBlock/Skeleton';
-import ErrorOnPage from '../ErrorOnPage/ErrorOnPage';
-import { selectorCartById } from 'redux/selectors';
+import ButtonToHome from 'components/ButtonToHome/ButtonToHome';
 
 import st from './DetailProduct.module.scss';
-import ButtonToHome from 'components/ButtonToHome/ButtonToHome';
 
 interface IProduct {
     title: string;

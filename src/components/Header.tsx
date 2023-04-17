@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { useAppSelector } from 'redux/store';
-import logo from '../assets/img/cash_tape.png';
+import User from './User';
 import Search from './Search/Search';
 import { sumProducts } from '../utils';
+import { useAppSelector } from 'redux/store';
+import logo from '../assets/img/cash_tape.png';
 import { selectorCart } from 'redux/selectors';
-import User from './User';
 
 const Header: React.FC = () => {
     const { items, totalPrice } = useAppSelector(selectorCart);

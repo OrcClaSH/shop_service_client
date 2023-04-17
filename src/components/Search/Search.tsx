@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import debounce from 'lodash.debounce';
+import { useDispatch } from 'react-redux';
 
 import { setSearchValue } from '../../redux/slices/search/searchSlice';
 
@@ -22,7 +22,6 @@ const Search = () => {
         updateSearchValue(value)
         if (!value) {
             dispatch(setSearchValue(''));
-            // inputRef.current?.focus(); //!
         };
     }, [value]);
 
@@ -58,4 +57,3 @@ const Search = () => {
 }
 
 export default Search;
-// export default React.memo(Search);

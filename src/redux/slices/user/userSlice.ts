@@ -1,8 +1,7 @@
-import { AnyAction, createAsyncThunk, createSlice, PayloadAction, current } from '@reduxjs/toolkit';
-import { AxiosError } from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { IUser, IAuthResponse, IUserState } from './types';
 import AuthService from 'services/AuthService';
+import { IUser, IAuthResponse, IUserState } from './types';
 
 interface IArgs {
     email: string;
@@ -55,9 +54,9 @@ export const logout = createAsyncThunk(
     }
 );
 
-export const checkAuth = createAsyncThunk<IAuthResponse, IArgs, { rejectValue: string }>(
+export const checkAuth = createAsyncThunk<IAuthResponse, void, { rejectValue: string }>(
     'user/checkAuth',
-    async function (IArgs, { rejectWithValue }) { // TODO
+    async function (_, { rejectWithValue }) {
         const response = await AuthService.refresh();
         if (response.status !== 200) {
             return rejectWithValue('Проблемы с обновление токена пользователя')

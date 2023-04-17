@@ -1,41 +1,6 @@
 {
   "compilerOptions": {
       "baseUrl": "src",
-      // "paths": {
-      //     "@components/*": [
-      //         "components/*"
-      //     ],
-      //     "@App/*": [
-      //         "App/*"
-      //     ],
-      //     "@assets/*": [
-      //         "assets/*"
-      //     ],
-      //     "@config/*": [
-      //         "config/*"
-      //     ],
-      //     "@context/*": [
-      //         "context/*"
-      //     ],
-      //     "@hooks/*": [
-      //         "hooks/*"
-      //     ],
-      //     "@router/*": [
-      //         "router/*"
-      //     ],
-      //     "@store/*": [
-      //         "store/*"
-      //     ],
-      //     "@styles/*": [
-      //         "styles/*"
-      //     ],
-      //     "@utils/*": [
-      //         "utils/*"
-      //     ],
-      //     "@pages/*": [
-      //         "App/pages/*"
-      //     ]
-      // },
       "lib": [
         "dom",
         "dom.iterable",

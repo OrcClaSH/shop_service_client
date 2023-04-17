@@ -1,13 +1,13 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from 'redux/store';
 import cn from 'classnames';
 
+import UserMenu from './components/UserMenu';
+import { checkAuth } from 'redux/slices/user/userSlice';
+import { useAppDispatch, useAppSelector } from 'redux/store';
 import { ReactComponent as LogoUserOut } from '../../assets/img/user-logo.svg';
 import { ReactComponent as LogoUserIn } from '../../assets/img/user-follow-logo.svg';
-import UserMenu from './components/UserMenu';
 
 import styles from './User.module.scss';
-import { checkAuth } from 'redux/slices/user/userSlice';
 
 const User: React.FC = () => {
     const [activeMenu, setActiveMenu] = React.useState(false);
@@ -22,7 +22,7 @@ const User: React.FC = () => {
 
     React.useEffect(() => {
         if (localStorage.getItem('token')) {
-            dispatch(checkAuth({ email: '', password: '' })); //TODO
+            dispatch(checkAuth())
         }
     }, []);
 

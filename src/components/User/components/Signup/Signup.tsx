@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { useAppDispatch, useAppSelector } from 'redux/store';
 import { useInput } from 'hooks/useValidateForm';
 import { registration } from 'redux/slices/user/userSlice';
+import { useAppDispatch, useAppSelector } from 'redux/store';
 
 import styles from './Signup.module.scss';
 
@@ -84,7 +84,6 @@ const Signup: React.FC<ISignup> = ({ setActiveSignup }) => {
                         <a
                             className={styles['signup-form__link']}
                             onClick={() => setActiveSignup(false)}
-                        // href="#"
                         >
                             Уже есть пользователь
                         </a>

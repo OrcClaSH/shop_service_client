@@ -3,7 +3,6 @@ import axios, { AxiosRequestConfig } from 'axios';
 import { IAuthResponse } from 'redux/slices/user/types';
 
 export const API_URL = process.env.REACT_APP_API_URL
-    // || 'http://clt.its:5000/api';
 
 const $api = axios.create({
     withCredentials: true,
@@ -26,7 +25,7 @@ $api.interceptors.response.use((config) => config, async (error) => {
             localStorage.setItem('token', response.data.accessToken);
             return $api.request(originalRequest);
         } catch (e) {
-            console.log('[interceptors] Не авторизован')
+            console.log('[interceptors] Не авторизован') // TODO
         }
     }
     throw error;

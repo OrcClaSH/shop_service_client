@@ -3,10 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import MainLayout from './layouts/MainLayout';
 import DetailProduct from './components/DetailProduct';
 
 import './scss/app.scss';
-import MainLayout from './layouts/MainLayout';
 
 const Cart = React.lazy(() => import(/* webpackChunkName: "Cart" */ './pages/Cart'));
 

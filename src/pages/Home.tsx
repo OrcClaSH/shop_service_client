@@ -1,22 +1,23 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from 'redux/store';
 import { useSearchParams } from 'react-router-dom';
 
+import { useAppSelector, useAppDispatch } from 'redux/store';
+
 import {
-    Pagination,
-    Skeleton,
-    Categories,
-    ProductBlock,
     Sort,
+    Skeleton,
+    Pagination,
+    Categories,
     ErrorOnPage,
+    ProductBlock,
 } from 'components';
 
-import { fetchProducts } from '../redux/slices/product/productsSlice';
-import { setPage } from '../redux/slices/pagination/paginationSlice';
-import { setActiveSortMethod } from '../redux/slices/sort/sortSlice';
-import { setActiveCategory } from '../redux/slices/category/categorySlice';
 import { makeUrl } from '../utils';
 import { selectorProducts } from 'redux/selectors';
+import { setPage } from '../redux/slices/pagination/paginationSlice';
+import { setActiveSortMethod } from '../redux/slices/sort/sortSlice';
+import { fetchProducts } from '../redux/slices/product/productsSlice';
+import { setActiveCategory } from '../redux/slices/category/categorySlice';
 
 const Home: React.FC = () => {
     const dispatch = useAppDispatch();

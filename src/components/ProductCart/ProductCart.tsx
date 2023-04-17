@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 
-import { typesProduct as typesProduct } from "../ProductBlock/ProductBlock";
-import { changeCount, removeItem } from "../../redux/slices/cart/cartSlice";
 import { TCartProducts as TCartProducts } from 'redux/slices/cart/types';
+import { changeCount, removeItem } from "../../redux/slices/cart/cartSlice";
+import { typesProduct as typesProduct } from "../ProductBlock/ProductBlock";
 
 const ProductCart: React.FC<TCartProducts> = ({
     title,

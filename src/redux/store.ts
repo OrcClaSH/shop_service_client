@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
-import categoryReducer from './slices/category/categorySlice';
 import sortReducer from './slices/sort/sortSlice';
-import searchReducer from './slices/search/searchSlice';
-import paginationReducer from './slices/pagination/paginationSlice';
-import ProductsReducer from './slices/product/productsSlice';
 import cartReducer from './slices/cart/cartSlice';
 import userReducer from './slices/user/userSlice';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import searchReducer from './slices/search/searchSlice';
+import ProductsReducer from './slices/product/productsSlice';
+import categoryReducer from './slices/category/categorySlice';
+import paginationReducer from './slices/pagination/paginationSlice';
 
 export const store = configureStore({
     reducer: {

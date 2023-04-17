@@ -1,8 +1,10 @@
 import React from 'react';
-import styles from '../../User.module.scss';
-import FollowUserMenu from '../FollowUserMenu';
+
 import Signin from '../Signin';
 import Signup from '../Signup';
+import FollowUserMenu from '../FollowUserMenu';
+
+import styles from '../../User.module.scss';
 
 interface IUserMenu {
     isAuthUser: Boolean;
@@ -25,14 +27,6 @@ const UserMenu: React.FC<IUserMenu> = ({ isAuthUser }) => {
                 ? <FollowUserMenu />
                 : <Signin setActiveSignup={setActiveSignup}
             />}
-
-            {/* {isAuthUser && !activeSignup
-                ? <FollowUserMenu />
-                : activeSignup
-                    ? <Signup />
-                    : <Signin setActiveSignup={setActiveSignup} />
-            } */}
-
         </div>
     )
 };

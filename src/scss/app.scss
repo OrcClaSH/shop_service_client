@@ -5,12 +5,7 @@
 @import 'components/all';
 
 html {
-  // width: calc(100vw - 100%);
-  // overflow-x: hidden;
-  // margin-right: calc(-1 * (100vw - 100%));
-  // overflow-y: scroll;
   overflow: overlay;
-  // scrollbar-gutter: stable;
 }
 
 body {

@@ -1,1 +1,1 @@
-export {default} from './FollowUserMenu';
+export { default } from './FollowUserMenu';
