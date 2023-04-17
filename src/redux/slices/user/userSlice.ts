@@ -23,7 +23,7 @@ export const registration = createAsyncThunk<IAuthResponse, IArgs, { rejectValue
             const response = await AuthService.registration(email, password);
             return response.data;
         } catch (error: any) {
-            console.log('error', error)
+            // console.log('error', error)
             return rejectWithValue(error?.response?.data?.message || `Проблемы с получением данных пользователя`);
         }
     }
@@ -37,7 +37,7 @@ export const login = createAsyncThunk<IAuthResponse, IArgs, { rejectValue: strin
             const response = await AuthService.login(email, password);
             return response.data;
         } catch (error: any) {
-            console.log('error', error)
+            // console.log('error', error)
             return rejectWithValue(error?.response?.data?.message || `Проблемы с получением данных пользователя`);
         }
     }
