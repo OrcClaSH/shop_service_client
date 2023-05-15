@@ -39,7 +39,7 @@ https://shop-service-client.vercel.app
 
 ![изображение](https://user-images.githubusercontent.com/48704701/213983934-5ce03b62-eef9-45bb-9347-c7b4adf4c595.png)
 
-![изображение](https://user-images.githubusercontent.com/48704701/213984428-effeb294-6b78-49d3-80ca-378b6b8e93e2.png)
+![изображение](https://github.com/OrcClaSH/shop_service_client/assets/48704701/023aeaed-2196-4a41-821e-10e651d1565e)
 
 ![изображение](https://user-images.githubusercontent.com/48704701/213984243-0926fbcd-bdb8-450a-bc79-a148df60cf74.png)
 
