@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useOutsideAlerter = (initialIsVisible: boolean) => {
+export const useOutsideClick = (initialIsVisible: boolean) => {
     const [isShow, setIsShow] = useState(initialIsVisible);
     const ref = useRef<HTMLDivElement | null>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (ref.current && !ref.current.contains(event.target as Node)) {
+        if (event.target instanceof Node && !ref.current?.contains(event.target)) {
             setIsShow(false);
         }
     }

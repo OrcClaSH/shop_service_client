@@ -98,7 +98,6 @@ export const userSlice = createSlice({
             .addCase(login.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload || '';
-                console.log('action >', action)
             })
             .addCase(logout.fulfilled, (state, action) => {
                 localStorage.removeItem('token');
