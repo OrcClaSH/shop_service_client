@@ -1,65 +1,67 @@
 @import '../../scss/variables';
 
 .wrapper {
-    position: relative;
-    z-index: 999;
+  position: relative;
+  z-index: 999;
 
-    &.active .user-menu {
-        opacity: 1;
-        transform: scale(1);
-        visibility: visible;
-    }
+  &.active .user-menu {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
-    fill: currentColor;
-    vertical-align: middle;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all .3s;
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  vertical-align: middle;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
 
-    &:hover {
-        fill: rgb(97, 97, 97);
-    }
+  &:hover {
+    fill: rgb(97, 97, 97);
+  }
 }
 
 .user-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -10px;
-    right: -20px;
-    max-width: max-content;
-    min-width: 300px;
-    max-height: max-content;
-    min-height: 300px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, .09);
-    background-color: $background;
-    border-radius: 8px;
-    box-shadow: $shadow;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-    transform-origin: right top;
-    transition: .4s, opacity .4s;
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  max-width: max-content;
+  min-width: 300px;
+  max-height: max-content;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  background-color: $background;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transform-origin: right top;
+  transition:
+    0.4s,
+    opacity 0.4s;
+  z-index: 1;
 }
 
 @media (max-width: 1200px) {
-    .wrapper {
-        order: 2;
-    }
+  .wrapper {
+    order: 2;
+  }
 }
 
 @media (max-width: 680px) {
-    .user-menu {
-        top: 0;
-        right: 0;
-        left: -327%;
-        transform-origin: center top;
-    }
+  .user-menu {
+    top: 0;
+    right: 0;
+    left: -327%;
+    transform-origin: center top;
+  }
 }

@@ -1,46 +1,33 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 import cn from 'classnames';
 
 import st from './Loader.module.scss';
 
 export enum LoaderSize {
-    s = 's',
-    m = 'm',
-    l = 'l'
-};
+  s = 's',
+  m = 'm',
+  l = 'l',
+}
 
 export type LoaderProps = {
-    loading?: boolean;
-    size?: LoaderSize;
-    className?: string;
+  loading?: boolean;
+  size?: LoaderSize;
+  className?: string;
 };
 
-const Loader: FC<LoaderProps> = ({
-    loading = true,
-    size = LoaderSize.s,
-    className
-}) => {
+const Loader: FC<LoaderProps> = ({ loading = true, size = LoaderSize.s, className }) => {
+  const classLoader = cn(className, st.loader, st[`loader-${size}`]);
 
-    const classLoader = cn(
-        className,
-        st.loader,
-        st[`loader-${size}`],
-    );
+  if (!loading) {
+    return null;
+  }
 
-    if (!loading) {
-        return null
-    };
-
-    return (
-        <div className={st['loader-wrapper']}>
-            <img
-                className={classLoader}
-                src={`./loader-${size}.svg`}
-                alt=""
-            />
-        </div>
-    );
+  return (
+    <div className={st['loader-wrapper']}>
+      <img className={classLoader} src={`./loader-${size}.svg`} alt="" />
+    </div>
+  );
 };
 
 export default Loader;
